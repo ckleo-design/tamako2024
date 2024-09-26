@@ -1,0 +1,117 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v5.0.2 | 20191019
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Vollkorn:wght@700&Poppins:wght@100;400;500;600;700&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block; }
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none; }
+
+body {
+  line-height: 1; }
+
+menu, ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.d-pc-lg {
+  display: none; }
+  @media screen and (min-width: 1601px) {
+    .d-pc-lg {
+      display: block; } }
+
+.d-pc {
+  display: block; }
+  @media screen and (max-width: 768px) {
+    .d-pc {
+      display: none; } }
+
+.d-sp {
+  display: none; }
+  @media screen and (max-width: 768px) {
+    .d-sp {
+      display: block; } }
+
+.d-sp-sm {
+  display: none; }
+  @media screen and (max-width: 375px) {
+    .d-sp-sm {
+      display: block; } }
+
+body {
+  background-color: #ffffff;
+  font-size: 16px;
+  line-height: 1em;
+  color: #333333;
+  letter-spacing: 0;
+  scroll-behavior: smooth; }
+
+.l-header {
+  width: 100%;
+  background-color: #42210b; }
+  .l-header__inner {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+    .l-header__inner__logo {
+      font-family: "Vollkorn", serif;
+      font-size: clamp(1.875rem, 1.5rem + 0.78vw, 2.125rem);
+      line-height: 100%;
+      color: #ffffff; }
+    .l-header__inner__navi {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      column-gap: 40px; }
+      .l-header__inner__navi--item {
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        line-height: 100%;
+        color: #ffffff;
+        font-weight: 600;
+        text-decoration: none; }
+        .l-header__inner__navi--item.is-active {
+          text-decoration: underline; }

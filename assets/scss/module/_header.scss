@@ -1,0 +1,33 @@
+.l-header {
+    width: 100%;
+    background-color: $color-blown;
+    &__inner {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 20px 30px;
+        @include display-flex(row, space-between, center);
+        &__logo {
+            font-family: $font-vollkorn;
+            font-size: unquote('clamp(1.875rem, 1.5rem + 0.78vw, 2.125rem)');
+            line-height: 100%;
+            color: $color-white;
+        }
+        &__navi {
+            @include display-flex(row, space-between, center);
+            column-gap: 40px;
+            &--item {
+                font-family: $font-poppins;
+                font-size: 16px;
+                line-height: 100%;
+                color: $color-white;
+                font-weight: 600;
+                text-decoration: none;
+                &.is-active {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
