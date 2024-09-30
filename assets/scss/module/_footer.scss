@@ -1,0 +1,77 @@
+.footer-section {
+    width: 100%;
+    height: auto;
+    &__banner {
+        padding: 86px 0 76px;
+        background-color: #f9e054;
+        @include display-flex(column, center, center);
+        row-gap: 32px;
+        &--title {
+            font-family: $font-poppins;
+            // font-size: unquote('clamp(1.875rem, 1.5rem + 0.78vw, 2.125rem)');
+            font-size: 26px;
+            line-height: 100%;
+            font-weight: 600;
+            color: $color-brown;
+        }
+        &--logo {
+            width: 147px;
+            height: auto;
+        }
+        &--alink {
+            background: $color-orange;
+            padding: 18px 62px;
+            border-radius: 50px;
+            font-family: $font-poppins;
+            // font-size: unquote('clamp(1.875rem, 1.5rem + 0.78vw, 2.125rem)');
+            font-size: 18px;
+            line-height: 100%;
+            font-weight: 500;
+            color: $color-white;
+            text-decoration: none;
+            transition: filter 0.3s linear;
+            &:hover {
+                filter: brightness(1.1);
+            }
+        }
+    }
+    .l-footer {
+        background-color: $color-brown;
+        text-align: center;
+        padding: 50px 0;
+        &--detail {
+            font-family: $font-poppins;
+            // font-size: unquote('clamp(1.875rem, 1.5rem + 0.78vw, 2.125rem)');
+            font-size: 14px;
+            line-height: 100%;
+            font-weight: 400;
+            color: $color-white;
+        }
+    }
+}
+@include respond(tablet) {
+    .footer-section {
+        &__banner {
+            padding: 60px 0;
+            &--title {
+                font-size: 28px;
+                line-height: 130%;
+                text-align: center;
+            }
+            &--logo {
+                width: 120px;
+            }
+            &--alink {
+                background: $color-orange;
+                padding: 12px 30px;
+            }
+        }
+        .l-footer {
+            padding: 50px 20px;
+            &--detail {
+                font-size: 12px;
+                line-height: 140%;
+            }
+        }
+    }
+}

@@ -1,0 +1,74 @@
+.l-enjoy {
+    background-color: #705e4d;
+    width: 100%;
+    height: auto;
+    padding: 90px 0 100px;
+    text-align: center;
+    &--title {
+        margin-bottom: 70px;
+        font-family: $font-vollkorn;
+        // font-size: unquote('clamp(1.875rem, 1.5rem + 0.78vw, 2.125rem)');
+        font-size: 50px;
+        line-height: 100%;
+        color: $color-white;
+    }
+    &__inner {
+        @include display-1280;
+        @include display-flex(row, space-between, flex-start);
+        flex-wrap: wrap;
+        row-gap: 44px;
+        &__block {
+            @include display-flex(column, center, center);
+            width: 29%;
+            text-align: center;
+            &--img {
+                width: 100%;
+                height: auto;
+                margin-bottom: 30px;
+            }
+            &--title {
+                margin-bottom: 20px;
+                font-family: $font-vollkorn;
+                // font-size: unquote('clamp(1.875rem, 1.5rem + 0.78vw, 2.125rem)');
+                font-size: 28px;
+                line-height: 100%;
+                color: $color-white;
+            }
+            &--detail {
+                font-family: $font-poppins;
+                // font-size: unquote('clamp(1.875rem, 1.5rem + 0.78vw, 2.125rem)');
+                font-size: 18px;
+                line-height: 140%;
+                font-weight: 500;
+                color: $color-white;
+            }
+        }
+    }
+}
+
+@include respond(tablet) {
+    .l-enjoy {
+        padding: 50px 0 70px;
+        &--title {
+            margin-bottom: 40px;
+            font-size: 30px;
+            line-height: 140%;
+        }
+        &__inner {
+            @include display-100sp;
+            @include display-flex(column, center, center);
+            row-gap: 60px;
+            box-sizing: border-box;
+            &__block {
+                @include display-flex(column, center, center);
+                width: 100%;
+                &--img {
+                    width: 80%;
+                }
+                &--title {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}

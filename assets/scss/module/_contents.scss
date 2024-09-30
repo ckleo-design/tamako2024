@@ -1,0 +1,30 @@
+.totop {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    transition: opacity 0.3s linear;
+    img {
+        width: 100%;
+        height: auto;
+    }
+    &.UpMove {
+        opacity: 1;
+    }
+    &.DownMove {
+        opacity: 0;
+    }
+}
+
+@include respond(tablet) {
+    .totop {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        display: block;
+        width: 60px;
+        height: 60px;
+    }
+}

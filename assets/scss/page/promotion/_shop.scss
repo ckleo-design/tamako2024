@@ -1,0 +1,139 @@
+.p-promotion {
+    width: 100%;
+    height: auto;
+    padding-bottom: 160px;
+    text-align: center;
+    &__restaurant {
+        @include display-1280;
+        @include display-flex(column, center, center);
+        row-gap: 160px;
+        &__block {
+            &__header {
+                @include display-flex(row, center, stretch);
+                margin-bottom: 80px;
+                &__img {
+                    width: 50%;
+                    height: auto;
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+                &__content {
+                    width: 50%;
+                    height: auto;
+                    background-color: #f8f4e9;
+                    @include display-flex(column, center, center);
+                    &--logo {
+                        width: auto;
+                        max-width: 33%;
+                        height: auto;
+                        max-height: 200px;
+
+                        margin-bottom: 34px;
+                    }
+                    &--name,
+                    &--address {
+                        font-family: $font-poppins;
+                        // font-size: unquote('clamp(1.875rem, 1.5rem + 0.78vw, 2.125rem)');
+                        font-size: 16px;
+                        line-height: 140%;
+                        font-weight: 500;
+                        color: $color-brown;
+                    }
+                    &--alink {
+                        font-family: $font-poppins;
+                        // font-size: unquote('clamp(1.875rem, 1.5rem + 0.78vw, 2.125rem)');
+                        font-size: 16px;
+                        line-height: 140%;
+                        font-weight: 400;
+                        color: #2f71b5;
+                        text-decoration: none;
+                    }
+                }
+            }
+            &__menu {
+                @include display-flex(row, space-between, flex-start);
+                &__1,
+                &__2 {
+                    width: 45%;
+                    &--img {
+                        width: 83%;
+                        height: auto;
+                        margin-bottom: 30px;
+                    }
+                    &--title {
+                        margin-bottom: 20px;
+                        font-family: $font-vollkorn;
+                        // font-size: unquote('clamp(1.875rem, 1.5rem + 0.78vw, 2.125rem)');
+                        font-size: 32px;
+                        line-height: 100%;
+                        color: $color-brown;
+                    }
+                    &--detail {
+                        font-family: $font-poppins;
+                        // font-size: unquote('clamp(1.875rem, 1.5rem + 0.78vw, 2.125rem)');
+                        font-size: 18px;
+                        line-height: 160%;
+                        font-weight: 500;
+                        color: $color-brown;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include respond(tablet) {
+    .p-promotion {
+        padding-bottom: 60px;
+        &__restaurant {
+            @include display-100sp;
+            @include display-flex(column, center, center);
+            row-gap: 80px;
+            box-sizing: border-box;
+            &__block {
+                &__header {
+                    @include display-flex(column, center, center);
+                    margin-bottom: 40px;
+                    &__img {
+                        width: 100%;
+                        img {
+                            vertical-align: sub;
+                        }
+                    }
+                    &__content {
+                        width: 100%;
+                        height: auto;
+                        background-color: #f8f4e9;
+                        @include display-flex(column, center, center);
+                        padding: 20px 0;
+                        &--logo {
+                            max-width: 40%;
+                            max-height: 140px;
+                            margin-bottom: 20px;
+                        }
+                        &--name,
+                        &--address {
+                            font-size: 18px;
+                        }
+                        &--alink {
+                            font-size: 18px;
+                        }
+                    }
+                }
+                &__menu {
+                    @include display-flex(column, center, center);
+                    row-gap: 40px;
+                    &__1,
+                    &__2 {
+                        width: 100%;
+                        &--img {
+                            width: 80%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

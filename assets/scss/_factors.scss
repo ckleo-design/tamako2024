@@ -1,0 +1,97 @@
+.l-factors {
+    background-color: $color-cream;
+    width: 100%;
+    height: auto;
+    padding: 90px 0 114px;
+    text-align: center;
+    &--title {
+        margin-bottom: 80px;
+        font-family: $font-vollkorn;
+        // font-size: unquote('clamp(1.875rem, 1.5rem + 0.78vw, 2.125rem)');
+        font-size: 50px;
+        line-height: 120%;
+        color: $color-brown;
+    }
+    &__inner {
+        @include display-1280;
+        @include display-flex(column, center, center);
+        row-gap: 74px;
+        &__block {
+            @include display-flex(row, space-between, center);
+            &__img {
+                width: 48%;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            &__content {
+                width: 48%;
+                &--title {
+                    margin-bottom: 20px;
+                    font-family: $font-vollkorn;
+                    // font-size: unquote('clamp(1.875rem, 1.5rem + 0.78vw, 2.125rem)');
+                    font-size: 32px;
+                    line-height: 120%;
+                    color: $color-brown;
+                    text-align: left;
+                }
+                &--detail {
+                    font-family: $font-poppins;
+                    // font-size: unquote('clamp(1.875rem, 1.5rem + 0.78vw, 2.125rem)');
+                    font-size: 18px;
+                    line-height: 140%;
+                    font-weight: 500;
+                    color: $color-brown;
+                    text-align: left;
+                }
+            }
+            &:nth-child(2n) {
+                .l-factors__inner__block__img {
+                    order: 1;
+                }
+                .l-factors__inner__block__content {
+                    order: 0;
+                }
+            }
+        }
+    }
+}
+
+@include respond(tablet) {
+    .l-factors {
+        padding: 60px 0 70px;
+        text-align: center;
+        &--title {
+            margin-bottom: 40px;
+            font-size: 30px;
+        }
+        &__inner {
+            @include display-100sp;
+            @include display-flex(column, center, center);
+            row-gap: 80px;
+            box-sizing: border-box;
+            &__block {
+                @include display-flex(column, center, flex-start);
+                &__img {
+                    width: 100%;
+                    margin-bottom: 30px;
+                }
+                &__content {
+                    width: 100%;
+                    &--title {
+                        font-size: 32px;
+                    }
+                }
+                &:nth-child(2n) {
+                    .l-factors__inner__block__img {
+                        order: 0;
+                    }
+                    .l-factors__inner__block__content {
+                        order: 1;
+                    }
+                }
+            }
+        }
+    }
+}

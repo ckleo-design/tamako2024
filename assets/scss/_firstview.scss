@@ -1,0 +1,65 @@
+.l-firstview {
+    background: url('../images/firstview-bg@2x.png') 50% 0 no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    padding-top: 70px;
+    display: grid;
+    place-items: center;
+    &__inner {
+        text-align: center;
+        &--subtitle {
+            font-family: $font-poppins;
+            // font-size: unquote('clamp(1.875rem, 1.5rem + 0.78vw, 2.125rem)');
+            font-size: 35px;
+            line-height: 100%;
+            font-weight: 600;
+            color: $color-brown;
+        }
+        &--title {
+            margin: 20px auto;
+            font-family: $font-vollkorn;
+            // font-size: unquote('clamp(1.875rem, 1.5rem + 0.78vw, 2.125rem)');
+            font-size: 96px;
+            line-height: 100%;
+            color: $color-brown;
+        }
+        &--tag {
+            background: $color-orange;
+            padding: 12px 0;
+            border-radius: 50px;
+            font-family: $font-poppins;
+            // font-size: unquote('clamp(1.875rem, 1.5rem + 0.78vw, 2.125rem)');
+            font-size: 26px;
+            line-height: 100%;
+            font-weight: 500;
+            color: $color-white;
+        }
+    }
+}
+@include respond(tablet) {
+    .l-firstview {
+        background: url('../images/firstview-bg@2x.png') 50% 0 no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 320px;
+        padding-top: 20px;
+        &__inner {
+            &--subtitle {
+                font-size: 20px;
+            }
+            &--title {
+                margin: 20px auto;
+                // font-size: unquote('clamp(1.875rem, 1.5rem + 0.78vw, 2.125rem)');
+                font-size: 48px;
+            }
+            &--tag {
+                display: block;
+                width: fit-content;
+                padding: 12px 20px;
+                font-size: 16px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
