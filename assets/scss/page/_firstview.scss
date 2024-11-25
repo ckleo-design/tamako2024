@@ -1,4 +1,5 @@
 .p-firstview {
+    padding-top: 60px;
     &__inner {
         background: url('../images/page-firstview-bg@2x.png') 50% 0 no-repeat;
         background-size: cover;
@@ -28,6 +29,7 @@
 }
 @include respond(tablet) {
     .p-firstview {
+        padding-top: 110px;
         &__inner {
             background: url('../images/page-firstview-bg@2x.png') 50% 0 no-repeat;
             background-size: cover;

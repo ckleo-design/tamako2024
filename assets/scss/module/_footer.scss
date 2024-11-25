@@ -1,6 +1,18 @@
 .footer-section {
     width: 100%;
     height: auto;
+    &__btnarea {
+        width: 100%;
+        background-color: #e6a541;
+        padding: 40px 0;
+        &__inner {
+            @include display-1280;
+            @include display-flex(row, space-between, stretch);
+            &--item {
+                width: 48%;
+            }
+        }
+    }
     &__banner {
         padding: 86px 0 76px;
         background-color: #f9e054;
@@ -51,6 +63,20 @@
 }
 @include respond(tablet) {
     .footer-section {
+        &__btnarea {
+            padding: 20px 0;
+            &__inner {
+                @include display-100sp;
+                @include display-flex(column, center, stretch);
+                box-sizing: border-box;
+                &--item {
+                    width: 100%;
+                    height: auto;
+                    aspect-ratio: 5/3;
+                    display: block;
+                }
+            }
+        }
         &__banner {
             padding: 60px 0;
             &--title {

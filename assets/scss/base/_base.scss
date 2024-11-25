@@ -5,4 +5,9 @@ body {
     color: $color-black;
     letter-spacing: 0;
     scroll-behavior: smooth;
+    img {
+        vertical-align: sub;
+        width: 100%;
+        height: auto;
+    }
 }

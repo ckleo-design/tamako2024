@@ -3,7 +3,7 @@
     background-size: cover;
     width: 100%;
     height: 600px;
-    padding-top: 70px;
+    padding-top: 130px;
     display: grid;
     place-items: center;
     &__inner {
@@ -32,17 +32,18 @@
             // font-size: unquote('clamp(1.875rem, 1.5rem + 0.78vw, 2.125rem)');
             font-size: 26px;
             line-height: 100%;
-            font-weight: 500;
+            font-weight: 700;
             color: $color-white;
         }
     }
 }
 @include respond(tablet) {
     .l-firstview {
-        background: url('../images/firstview-bg@2x.png') 50% 0 no-repeat;
+        background: url('../images/firstview-bg-sp@2x.png') 50% 50% no-repeat;
         background-size: cover;
         width: 100%;
-        height: 320px;
+        height: 360px;
+        margin-top: 120px;
         padding-top: 20px;
         &__inner {
             &--subtitle {
